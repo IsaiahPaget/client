@@ -1,13 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	background-color: aliceblue;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@keyframes color-rotate {
+	from {
+		filter: hue-rotate(0deg);
+	}
+	to {
+		filter: hue-rotate(360deg);
+	}
+}
+@media screen and (prefers-color-scheme: light) {
+	.wavy-upright {
+		margin-top: 10vh;
+		background-image: url("../public/layered-waves-light1.svg");
+		background-size: cover;
+		min-height: 220px;
+	}
+
+	.wavy-downright {
+		rotate: 180deg;
+		background-image: url("../public/layered-waves-light2.svg");
+		background-size: cover;
+		min-height: 220px;
+	}
+}
+
+@media screen and (prefers-color-scheme: dark) {
+	.wavy-upright {
+		margin-top: 10vh;
+		background-image: url("../public/layered-waves-haikei.svg");
+		background-size: cover;
+		min-height: 220px;
+	}
+	.wavy-downright {
+		rotate: 180deg;
+		background-image: url("../public/layered-waves-haikei.svg");
+		background-size: cover;
+		min-height: 220px;
+	}
+}
+.colour-rotate {
+	animation: color-rotate 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+
+::-webkit-scrollbar {
+	width: 0.5em;
+}
+::-webkit-scrollbar-track {
+	background-color: #273444;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #ffa50b;
+	border-radius: 5px;
+}
+
+.card-list::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+}
+
+.headshot {
+	display: flex;
+	/* background-image: url('./assets/headshot.svg'); */
+	background-repeat: no-repeat;
+	border-radius: 5px;
+	background-position: 50% 5%;
+	height: 400px;
+	width: 400px;
+	border-radius: 60%;
+	border-width: 3px;
+	border-color: #ffa50b;
+	margin-left: 25%;
+}
+
+.show-border {
+	border-width: 3px;
+}
+
+.card-trick {
+	width: 300px;
+	height: 525px;
+	min-width: 300px;
+	box-shadow: -1rem 0 2rem rgba(29, 13, 1, 0.623);
+}
+
+.card-trick:hover ~ .card-trick {
+	transform: translateX(130px);
+}
+
+.card-trick:not(:first-child) {
+	margin-left: -130px;
 }

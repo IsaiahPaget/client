@@ -1,3 +1,14 @@
+# content and features
+
+- animated nav bar with svg icons
+- dark mode
+- mobile first design
+- animated cards for certificates that I have made
+- node backend
+- curves
+- dynamic content based on the weather
+- parallax effect
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
