@@ -1,21 +1,25 @@
-import react from 'react';
+import react, { useState } from "react";
+import { motion } from "framer-motion";
+
 
 function NavBar(props) {
-	return (
-		<div className="grid grid-cols-12 p-5 bg-gradient-to-r from-dark-green to-green dark:bg-gradient-to-r dark:from-tertiary dark:to-gray-dark">
-			<div className="text-white font-extrabold col-span-9 dark:hover:text-secondary hover:-translate-y-1 duration-700">
-				Hey, I am Isaiah!
-			</div>
 
-			<div className="text-white font-bold justify-self-center dark:hover:text-secondary hover:-translate-y-1 duration-700">
-				<h1>Contact</h1>
+	return (
+		<div className='p-5 bg-gradient-to-r from-alert to-secondary dark:bg-gradient-to-r dark:from-tertiary dark:to-gray-dark'>
+			<div className='flex max-w-7xl mx-auto'>
+				<div className='text-white font-extrabold flex-grow dark:hover:text-secondary hover:-translate-y-1 duration-700'>
+					<a href='/'>Hey, I am Isaiah!</a>
+				</div>
+
+				<div className='text-white font-bold justify-self-center dark:hover:text-secondary hover:-translate-y-1 duration-700'>
+					<button onClick={props.onModalClick}>Contact</button>
+				</div>
+				<div className='text-white font-bold justify-self-center ml-8 dark:hover:text-secondary hover:-translate-y-1 duration-700'>
+					<a href='https://github.com/IsaiahPaget' target='_blank' rel="noreferrer">
+						GitHub
+					</a>
+				</div>
 			</div>
-			<div className="text-white font-bold justify-self-center dark:hover:text-secondary hover:-translate-y-1 duration-700">
-				<h1>Theme</h1>
-			</div>
-			<div className="text-white font-bold justify-self-center dark:hover:text-secondary hover:-translate-y-1 duration-700">
-				<h1>GitHub</h1>
-			</div>			
 		</div>
 	);
 }

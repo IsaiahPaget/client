@@ -7,7 +7,7 @@ const projects = [
 	{
 		title: "Plane Obstacle Course Game",
 		image: "/images/threejs project.png",
-		description: "This is a low poly flying game that I am working on, I am using vite and threejs. Its in its infancy right now, but I have all the controls and flying down, now I have ot add the obstacles and the sky box",
+		description: "This is a low poly flying game that I am working on, I am using vite and threejs. Its in its infancy right now, but I have all the controls and flying down, now I have to add the obstacles and the sky box",
 	},
 	{
 		title: "Arc Liquor Store",
@@ -16,6 +16,7 @@ const projects = [
 		description:
 			"This is a website I have developed for Armstrong Regional Coop's liquor stores. This website was made with React and Boostrap, it features a live interface with the store's POS system and a custom admin panel.",
 	},
+	
 ];
 
 export default projects;
